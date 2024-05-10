@@ -5,7 +5,6 @@ import Output from "./Output";
 function App() {
   return (
     <>
-      <h1>TransLingoGPT</h1>
       <Nav/>
       <Input/>
       <Output/>
