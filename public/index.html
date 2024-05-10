@@ -1,11 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TransLingoGPT</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trans-Lingo-GPT</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div id="head">
+        <img src="./icon.png" alt="logo" height="60px" />
+        <h1>Trans-Lingo-GPT</h1>
+      </div>
+      <input type="text" id="userInput" placeholder="Enter text to translate" />
+      <button id="submitButton" onclick="translator()">Translate</button>
+
+      <div id="loading-animation">
+        <span class="svg-spinners--6-dots-scale"></span>
+      </div>
+
+      <button id="virtualKeyboard" onclick="virtualKeyboard()">
+        Virtual Keyboard
+      </button>
+      <div class="simple-keyboard"></div>
+
+      <br />
+      <div style="display: flex; justify-content: center">
+        <div id="output">the output will look like this</div>
+
+        <select id="selector"></select>
+
+        <div id="readAloud" onclick="readAloud(event)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="cyan"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              d="M8.8 20v-4.1l1.9.2a2.3 2.3 0 0 0 2.164-2.1V8.3A5.37 5.37 0 0 0 2 8.25c0 2.8.656 3.054 1 4.55a5.8 5.8 0 0 1 .029 2.758L2 20m17.8-2.2a7.5 7.5 0 0 0 .003-10.603M17 15a3.5 3.5 0 0 0-.025-4.975"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    <script src="/script.js"></script>
+  </body>
 </html>

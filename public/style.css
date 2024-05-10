@@ -1,0 +1,131 @@
+body {
+  background: linear-gradient(#407b9b, #9900ff);
+  background-attachment: fixed;
+  font-family: sans-serif;
+  color: white;
+}
+
+#head {
+  display: flex;
+  justify-content: center;
+  filter: drop-shadow(5px 5px 5px #000000);
+}
+
+#submitButton {
+  margin: 10px;
+  border: none;
+  padding: 10px;
+  background-color: #2d046f;
+  filter: drop-shadow(5px 5px 1px #000000);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: transform 0.1s ease-in-out, filter 0.1s ease-in-out;
+}
+
+#submitButton:hover {
+  cursor: pointer;
+  background-color: #9900ff;
+  transform: translateY(2px) translateX(2px);
+  filter: drop-shadow(3px 3px 0px #000000);
+}
+
+#submitButton:active {
+  transform: translateY(1px) translateX(1px);
+  filter: drop-shadow(2px 2px 0px #000000);
+}
+
+#output {
+  width: 400px;
+  height: 30px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.323);
+  border-radius: 5px;
+}
+
+#readAloud {
+  cursor: pointer;
+  width: 20px;
+  height: 30px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.323);
+  border-radius: 5px;
+}
+
+#readAloud:hover {
+  background-color: #ffffff3a;
+}
+
+#userInput {
+  background-color: #ffffff3a;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+#userInput::placeholder {
+  color: rgba(255, 255, 255, 0.625);
+}
+
+#userInput:focus {
+  outline: none;
+}
+
+#selector {
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff00;
+  border: 1px solid rgba(255, 255, 255, 0.323);
+  border-radius: 5px;
+  color: white;
+}
+
+#selector:focus {
+  outline: none;
+}
+
+#selector option {
+  color: black;
+}
+
+#virtualKeyboard {
+  cursor: pointer;
+  font-size: 15px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff00;
+  border: 1px solid rgba(255, 255, 255, 0.323);
+  border-radius: 5px;
+  color: white;
+}
+
+#virtualKeyboard:hover {
+  background-color: #ffffff3a;
+}
+
+.simple-keyboard {
+  display: none;
+  color: black;
+  width: 50%;
+}
+
+#loading-animation {
+  display: none;
+  /* Initially hidden */
+  /* Add your animation styles here (e.g., for a spinner) */
+}
+
+.svg-spinners--6-dots-scale {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='3' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale0' fill='freeze' attributeName='r' begin='0;svgSpinners6DotsScale2.end-0.5s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='16.5' cy='4.21' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale1' fill='freeze' attributeName='r' begin='svgSpinners6DotsScale0.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='7.5' cy='4.21' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale2' fill='freeze' attributeName='r' begin='svgSpinners6DotsScale4.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='19.79' cy='7.5' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale3' fill='freeze' attributeName='r' begin='svgSpinners6DotsScale1.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='4.21' cy='7.5' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale4' fill='freeze' attributeName='r' begin='svgSpinners6DotsScale6.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='21' cy='12' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale5' fill='freeze' attributeName='r' begin='svgSpinners6DotsScale3.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='3' cy='12' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale6' fill='freeze' attributeName='r' begin='svgSpinners6DotsScale8.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='19.79' cy='16.5' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale7' fill='freeze' attributeName='r' begin='svgSpinners6DotsScale5.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='4.21' cy='16.5' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale8' fill='freeze' attributeName='r' begin='svgSpinners6DotsScalea.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='16.5' cy='19.79' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScale9' fill='freeze' attributeName='r' begin='svgSpinners6DotsScale7.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='7.5' cy='19.79' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScalea' fill='freeze' attributeName='r' begin='svgSpinners6DotsScaleb.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3Ccircle cx='12' cy='21' r='0' fill='white'%3E%3Canimate id='svgSpinners6DotsScaleb' fill='freeze' attributeName='r' begin='svgSpinners6DotsScale9.begin+0.1s' calcMode='spline' dur='0.6s' keySplines='0,1,0,1;.53,0,.61,.73' keyTimes='0;.2;1' values='0;2;0'/%3E%3C/circle%3E%3C/svg%3E");
+}
