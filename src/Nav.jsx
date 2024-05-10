@@ -3,7 +3,41 @@ import React from "react";
 export default function Nav() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <div class="bg-gray-800 text-white flex justify-between items-center h-16 px-4">
+        {/* Logo or Brand Name */}
+        <h1 class="text-xl font-bold">TransLingoGPT</h1>
+
+        {/* Navigation Links */}
+        <nav class="hidden md:flex space-x-4">
+          <a href="#" class="hover:text-gray-400">
+            Home
+          </a>
+          <a href="#" class="hover:text-gray-400">
+            Models
+          </a>
+          <a href="#" class="hover:text-gray-400">
+            Devs
+          </a>
+        </nav>
+
+        {/* Hamburger Menu for Mobile (Optional) */}
+        <button class="md:hidden focus:outline-none">
+          <svg
+            class="h-6 w-6"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16v12H4zm-2-2a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4z"
+            />
+          </svg>
+        </button>
+      </div>
     </>
   );
 }
