@@ -127,5 +127,5 @@ body {
   height: 24px;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  background-image: url("./spinner.svg");
+  background-image: url("./assets/spinner.svg");
 }
