@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useState } from 'react';
 
-export default function Nav() {
+function Output() {
+  // State to hold the input value
+  const [inputValue, setInputValue] = useState('');
+
+  // Function to handle input change
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
   return (
+<<<<<<< HEAD
+    <div className="max-w-md mx-auto">
+      {/* Input field */}
+      <input 
+        type="text" 
+        value={inputValue} 
+        onChange={handleInputChange} 
+        className="mt-1 p-2 w-full border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+        placeholder="Type something here..."
+      />
+
+      {/* Output adjacent to input */}
+    </div>
+=======
     <>
       <div className="bg-gray-800 text-white flex justify-between items-center h-16 px-4">
         {/* Logo or Brand Name */}
@@ -39,5 +61,8 @@ export default function Nav() {
         </button>
       </div>
     </>
+>>>>>>> dded54093d84657fcb9276d0e3f572e5fefa025b
   );
 }
+
+export default MyComponent;
