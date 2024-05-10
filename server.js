@@ -6,6 +6,11 @@ app.use(cors());
 app.use(express.json());
 const { spawn } = require("child_process");
 
+app.use((req, res, next) => {
+  console.log("New request received:", Date.now());
+  next();
+});
+
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
@@ -14,7 +19,7 @@ app.get("/", (req, res) => {
 
 app.post("/translate", (req, res) => {
   let userInput = req.body.user;
-  const python = spawn("python", ["./translate.py"]);
+  const python = spawn("python", ["./pythonexe/translate.py"]);
   python.stdin.write(userInput.toString());
   python.stdin.end();
 
