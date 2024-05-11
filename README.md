@@ -5,21 +5,13 @@ In a globalized world, effective communication across languages is crucial. Howe
 ![language-problem](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS10FfW4ofgBwhTgm_Uvw7hiE1pJx-KF2ojXEykn_cDjg&s)
 
 # Solution Approach
-<<<<<<< HEAD
 
-Our approach tackles the challenge of building a website that translates between English, Sanskrit, and Hindi. It emphasizes overcoming limitations of current translation tools by proposing a character-level language model with a state-of-the-art Transformer architecture. We will train this model to understand complex grammar and translate text or speech input into the desired language (text or speech output).
-=======
 Our approach tackles the challenge of building a website that translates between English, Sanskrit, Hindi and Hinglish. It emphasizes overcoming limitations of current translation tools by proposing a character-level language model with a state-of-the-art Transformer architecture. We will train this model to understand complex grammar and translate text or speech input into the desired language (text or speech output).
->>>>>>> 995c6406ac9d552882eb801aa6ec51d5ad55c9d3
 
 We propose the development of a language translator web application equipped with advanced features to facilitate cross-language communication. The application will be built using the NodeJS web framework for seamless deployment of machine learning models.
 
-<<<<<<< HEAD
-![Alt Text](https://talents.blr1.digitaloceanspaces.com/1703411005/i-can-translate-englishnepalifrenchkorean-and-hindi-respectively.png)
-
-=======
 ![different-language](https://talents.blr1.digitaloceanspaces.com/1703411005/i-can-translate-englishnepalifrenchkorean-and-hindi-respectively.png)
->>>>>>> 995c6406ac9d552882eb801aa6ec51d5ad55c9d3
+
 # Tech Stack
 
 1. **Data Acquisition and Preprocessing:**
@@ -33,6 +25,7 @@ We propose the development of a language translator web application equipped wit
    Train a model using a character-level approach and transformer architecture to understand the grammatical intricacies of each language.
 
    > Libraries used:
+   >
    > - PyTorch
    > - PyTorch.nn
    > - ONNX Runtime
