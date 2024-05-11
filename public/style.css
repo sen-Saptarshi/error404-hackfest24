@@ -87,7 +87,7 @@ body {
   outline: none;
 }
 
-#selector {
+#voiceSelector {
   margin: 10px;
   padding: 10px;
   background-color: #ffffff00;
@@ -96,11 +96,11 @@ body {
   color: white;
 }
 
-#selector:focus {
+#voiceSelector:focus {
   outline: none;
 }
 
-#selector option {
+#voiceSelector option {
   color: black;
 }
 
@@ -118,12 +118,6 @@ body {
 
 #virtualKeyboard:hover {
   background-color: #ffffff3a;
-}
-
-.simple-keyboard {
-  display: none;
-  color: black;
-  width: 50%;
 }
 
 #loading-animation {
