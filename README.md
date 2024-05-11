@@ -5,7 +5,7 @@ In a globalized world, effective communication across languages is crucial. Howe
 
 
 # Solution Approach
-Our approach tackles the challenge of building a website that translates between English, Sanskrit, and Hindi. It emphasizes overcoming limitations of current translation tools by proposing a character-level language model with a state-of-the-art Transformer architecture. We will train this model to understand complex grammar and translate text or speech input into the desired language (text or speech output).
+Our approach tackles the challenge of building a website that translates between English, Sanskrit, Hindi and Hinglish. It emphasizes overcoming limitations of current translation tools by proposing a character-level language model with a state-of-the-art Transformer architecture. We will train this model to understand complex grammar and translate text or speech input into the desired language (text or speech output).
 
 We propose the development of a language translator web application equipped with advanced features to facilitate cross-language communication. The application will be built using the Flask web framework for seamless deployment of machine learning models.
 
@@ -27,7 +27,7 @@ Train a model using a character-level approach and transformer architecture to u
 4. **Integration of Machine Learning Models:**
    - Integrate the trained translation models into the Flask application.
    - Use Python libraries like TensorFlow Serving or ONNX Runtime for model deployment.
-   - Implement translation functionality that takes input text in English and outputs translations in Sanskrit or Hindi.
+   - Implement translation functionality that takes input text in English and outputs translations in Sanskrit, Hindi or Hinglish.
 
 5. **Text-to-Speech (TTS) Integration:**
    - Integrate a text-to-speech system to convert translated text into spoken words.
