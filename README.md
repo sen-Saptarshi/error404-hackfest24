@@ -9,7 +9,6 @@ In a globalized world, effective communication across languages is crucial. Howe
 # Solution Approach
 
 Our approach tackles the challenge of building a website that translates between English, Sanskrit, Hindi and Hinglish. It emphasizes overcoming limitations of current translation tools by proposing a character-level language model with a state-of-the-art Transformer architecture. We will train this model to understand complex grammar and translate text or speech input into the desired language (text or speech output).
-
 We propose the development of a language translator web application equipped with advanced features to facilitate cross-language communication. The application will be built using the NodeJS web framework for seamless deployment of machine learning models.
 
 ![different-language](https://talents.blr1.digitaloceanspaces.com/1703411005/i-can-translate-englishnepalifrenchkorean-and-hindi-respectively.png)
