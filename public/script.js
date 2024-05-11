@@ -36,7 +36,7 @@ for (let i = 0; i < models.length; i++) {
 modelSelector.addEventListener("change", (event) => {
   // Get the selected option's value (index in the models array)
   modelCode = parseInt(event.target.value);
-  console.log("Selected model:", models[modelCode]); // Optional for debugging
+  // console.log("Selected model:", models[modelCode]); // Optional for debugging
 });
 
 /* Translate API call Functionality */
@@ -45,7 +45,7 @@ async function translator() {
   const userInputField = document.getElementById("userInput");
   const outputDiv = document.getElementById("output");
   outputDiv.textContent = "";
-  const userInput = userInputField.value;
+  let userInput = userInputField.value.toLowerCase();
   const response = await fetch("/translate", {
     method: "POST", // Adjust to POST if your backend expects it
     body: JSON.stringify({ user: userInput, code: modelCode }),
