@@ -2,16 +2,24 @@
 
 In a globalized world, effective communication across languages is crucial. However, language barriers often hinder seamless interaction. To address this issue, we aim to develop a web application that provides real-time translation services from English to Sanskrit and English to Hindi. Additionally, the application will incorporate text-to-speech and speech-to-text features to enhance accessibility and user experience.
 
-![Alt Text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS10FfW4ofgBwhTgm_Uvw7hiE1pJx-KF2ojXEykn_cDjg&s)
+![language-problem](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS10FfW4ofgBwhTgm_Uvw7hiE1pJx-KF2ojXEykn_cDjg&s)
 
 # Solution Approach
+<<<<<<< HEAD
 
 Our approach tackles the challenge of building a website that translates between English, Sanskrit, and Hindi. It emphasizes overcoming limitations of current translation tools by proposing a character-level language model with a state-of-the-art Transformer architecture. We will train this model to understand complex grammar and translate text or speech input into the desired language (text or speech output).
+=======
+Our approach tackles the challenge of building a website that translates between English, Sanskrit, Hindi and Hinglish. It emphasizes overcoming limitations of current translation tools by proposing a character-level language model with a state-of-the-art Transformer architecture. We will train this model to understand complex grammar and translate text or speech input into the desired language (text or speech output).
+>>>>>>> 995c6406ac9d552882eb801aa6ec51d5ad55c9d3
 
 We propose the development of a language translator web application equipped with advanced features to facilitate cross-language communication. The application will be built using the NodeJS web framework for seamless deployment of machine learning models.
 
+<<<<<<< HEAD
 ![Alt Text](https://talents.blr1.digitaloceanspaces.com/1703411005/i-can-translate-englishnepalifrenchkorean-and-hindi-respectively.png)
 
+=======
+![different-language](https://talents.blr1.digitaloceanspaces.com/1703411005/i-can-translate-englishnepalifrenchkorean-and-hindi-respectively.png)
+>>>>>>> 995c6406ac9d552882eb801aa6ec51d5ad55c9d3
 # Tech Stack
 
 1. **Data Acquisition and Preprocessing:**
@@ -39,7 +47,7 @@ We propose the development of a language translator web application equipped wit
 
    - Integrate the trained translation models into the NodeJS application.
    - Use Python libraries like TensorFlow Serving or ONNX Runtime for model deployment.
-   - Implement translation functionality that takes input text in English and outputs translations in Sanskrit or Hindi.
+   - Implement translation functionality that takes input text in English and outputs translations in Sanskrit, Hindi or Hinglish.
 
 5. **Text-to-Speech (TTS) Integration:**
 
@@ -58,3 +66,5 @@ We propose the development of a language translator web application equipped wit
 By implementing this solution, we aim to bridge the language gap and provide users with a convenient and efficient tool for cross-language communication, enhancing global connectivity and collaboration.
 
 This solution leverages Flask for its simplicity and flexibility in deploying machine learning models, ensuring a smooth user experience and efficient translation services.
+
+![cat-dog](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMH_Ptw-tS0FH_Vup35-JX4-m8occQ66Bsuos21rMufw&s)
