@@ -2,6 +2,8 @@
 
 In a globalized world, effective communication across languages is crucial. However, language barriers often hinder seamless interaction. To address this issue, we aim to develop a web application that provides real-time translation services from English to Sanskrit and English to Hindi. Additionally, the application will incorporate text-to-speech and speech-to-text features to enhance accessibility and user experience.
 
+[(Doc link)](https://docs.google.com/document/d/1Ohi__EgosyaZY7Cl83grHvJWuEvrB9yvivgiDjfuzBQ/edit?usp=sharing)
+
 ![language-problem](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS10FfW4ofgBwhTgm_Uvw7hiE1pJx-KF2ojXEykn_cDjg&s)
 
 # Solution Approach
@@ -12,17 +14,15 @@ We propose the development of a language translator web application equipped wit
 
 ![different-language](https://talents.blr1.digitaloceanspaces.com/1703411005/i-can-translate-englishnepalifrenchkorean-and-hindi-respectively.png)
 
-# Tech Stack
-
 1. **Data Acquisition and Preprocessing:**
 
    - Gather English to Sanskrit and English to Hindi translation datasets.
    - Preprocess the datasets to clean and normalize the text.
 
-   > Sources:
+   > Sources: Huggingface, Kaggle
 
 2. **Model Training:**
-   Train a model using a character-level approach and transformer architecture to understand the grammatical intricacies of each language.
+   We will train a character-level language model based on the Transformer architecture to understand the grammatical intricacies of each language. The Transformer will have multiple encoder and decoder blocks. The decoder will use the output from the encoder along with the text generated till now and predict the next character in the required language. The self attention mechanism will help in translation longer texts and still give accurate results.
 
    > Libraries used:
    >
