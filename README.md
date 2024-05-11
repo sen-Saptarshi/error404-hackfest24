@@ -5,16 +5,14 @@ In a globalized world, effective communication across languages is crucial. Howe
 
 
 # Solution Approach
-Our approach tackles the challenge of building a website that translates between English, Sanskrit, and French. It emphasizes overcoming limitations of current translation tools by proposing a character-level language model with a state-of-the-art Transformer architecture. We will train this model to understand complex grammar and translate text or speech input into the desired language (text or speech output).
-
-
-![Alt Text](https://images.indianexpress.com/2020/08/sanskrit1.jpeg)
-
+Our approach tackles the challenge of building a website that translates between English, Sanskrit, and Hindi. It emphasizes overcoming limitations of current translation tools by proposing a character-level language model with a state-of-the-art Transformer architecture. We will train this model to understand complex grammar and translate text or speech input into the desired language (text or speech output).
 
 We propose the development of a language translator web application equipped with advanced features to facilitate cross-language communication. The application will be built using the Flask web framework for seamless deployment of machine learning models.
+
+![Alt Text](https://talents.blr1.digitaloceanspaces.com/1703411005/i-can-translate-englishnepalifrenchkorean-and-hindi-respectively.png)
 # Tech Stack
 1. **Data Acquisition and Preprocessing:**
-   - Gather English to Sanskrit and English to French translation datasets.
+   - Gather English to Sanskrit and English to Hindi translation datasets.
    - Preprocess the datasets to clean and normalize the text.
 
 2. **Model Training:**
@@ -29,7 +27,7 @@ Train a model using a character-level approach and transformer architecture to u
 4. **Integration of Machine Learning Models:**
    - Integrate the trained translation models into the Flask application.
    - Use Python libraries like TensorFlow Serving or ONNX Runtime for model deployment.
-   - Implement translation functionality that takes input text in English and outputs translations in Sanskrit or French.
+   - Implement translation functionality that takes input text in English and outputs translations in Sanskrit or Hindi.
 
 5. **Text-to-Speech (TTS) Integration:**
    - Integrate a text-to-speech system to convert translated text into spoken words.
