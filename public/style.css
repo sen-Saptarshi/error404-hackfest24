@@ -42,21 +42,21 @@ body {
 }
 
 #output {
-  width: 400px;
-  height: 30px;
+  width: 60vh;
+  height: 5vh;
   margin: 10px;
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.323);
-  border-radius: 5px;
+  border: 0.1vh solid rgba(255, 255, 255, 0.323);
+  border-radius: 0.7vh;
 }
 
 #readAloud {
   cursor: pointer;
-  width: 20px;
-  height: 30px;
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.323);
+  width: 3vh;
+  height: 5vh;
+  margin: 3vh;
+  padding: 3vh;
+  border: 0.3vh solid rgba(255, 255, 255, 0.323);
   border-radius: 5px;
 }
 
@@ -73,9 +73,11 @@ body {
   border: none;
   border-radius: 5px;
   font-size: 20px;
-  resize: none;
+  resize: none; 
+  overflow-y: hidden;
+  min-height: 35vh;
   height: auto;
-
+  width: 55%;
 }
 
 
@@ -91,8 +93,9 @@ body {
   margin: 10px;
   padding: 10px;
   background-color: #ffffff00;
-  border: 1px solid rgba(255, 255, 255, 0.323);
-  border-radius: 5px;
+  border: 0.2vh solid rgba(255, 255, 255, 0.323);
+  border-radius: 0.7vh;
+  height: 5vh;
   color: white;
 }
 
