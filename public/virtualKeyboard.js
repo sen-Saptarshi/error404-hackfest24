@@ -40,7 +40,7 @@ createKeyboard();
 function virtualKeyboard() {
   const keyboardElement = document.querySelector("#keyboard");
   if (keyboardElement.style.display === "none") {
-    keyboardElement.style.display = "block";
+    keyboardElement.style.display = "flex";
   } else {
     keyboardElement.style.display = "none";
   }
