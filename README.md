@@ -62,6 +62,7 @@ This solution leverages Flask for its simplicity and flexibility in deploying ma
 
 ![cat-dog](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMH_Ptw-tS0FH_Vup35-JX4-m8occQ66Bsuos21rMufw&s)
 
+
 # Workflow
 
 1. [Data Acquisition and Preprocessing](#data-acquisition-and-preprocessing)
