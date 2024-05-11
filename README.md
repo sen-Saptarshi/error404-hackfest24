@@ -40,8 +40,8 @@ We propose the development of a language translator web application equipped wit
 4. **Integration of Machine Learning Models:**
 
    - Integrate the trained translation models into the NodeJS application.
-   - Use Python libraries like TensorFlow Serving or ONNX Runtime for model deployment.
-   - Implement translation functionality that takes input text in English and outputs translations in Sanskrit, Hindi or Hinglish.
+   - Implement translation functionality that takes input text in input language and outputs translations in Sanskrit, Hindi, Hinglish or English.
+   - The GPT model will be integrated into a user-friendly website using NodeJS in the backend and HTML in the client-side.The model will be converted to “.pt” file.
 
 5. **Text-to-Speech (TTS) Integration:**
 
