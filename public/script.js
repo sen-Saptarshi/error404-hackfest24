@@ -106,29 +106,3 @@ const readAloud = (event) => {
   }
 };
 
-/* Virtual KeyBoard Functionality */
-
-// const Keyboard = window.SimpleKeyboard.default;
-
-// const myKeyboard = new Keyboard({
-//   onChange: (input) => onChange(input),
-//   onKeyPress: (button) => onKeyPress(button),
-// });
-
-// function onChange(input) {
-//   document.getElementById("userInput").value = input;
-//   // console.log("Input changed", input);
-// }
-
-// function onKeyPress(button) {
-//   // console.log("Button pressed", button);
-// }
-// // visibility of virtual keyboard
-// function virtualKeyboard() {
-//   const keyboardElement = document.querySelector(".simple-keyboard");
-//   if (keyboardElement.style.display === "none") {
-//     keyboardElement.style.display = "block";
-//   } else {
-//     keyboardElement.style.display = "none";
-//   }
-// }
