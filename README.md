@@ -19,7 +19,7 @@ We propose the development of a language translator web application equipped wit
 Train a model using a character-level approach and transformer architecture to understand the grammatical intricacies of each language.
 
 
-3. **Flask Web Application Development:**
+3. **NodeJS Web Application Development:**
    - Develop the front-end of the web application using HTML, CSS, and JavaScript for user interaction and interface design.
    - Integrate Flask as the backend framework to handle HTTP requests and responses.
    - Implement routes for translation requests and serving the web pages.
