@@ -8,14 +8,15 @@ body {
 #head {
   display: flex;
   justify-content: center;
-  filter: drop-shadow(5px 5px 5px #000000);
+  filter: drop-shadow(3px 3px 3px #877373);
 }
 
 #submitButton {
+  width: 50%;
   margin: 10px;
   border: none;
-  padding: 10px;
-  background-color: #2d046f;
+  padding:10px 15px;
+  background-color: #541ab1;
   filter: drop-shadow(5px 5px 1px #000000);
   color: white;
   font-size: 20px;
@@ -34,6 +35,10 @@ body {
 #submitButton:active {
   transform: translateY(1px) translateX(1px);
   filter: drop-shadow(2px 2px 0px #000000);
+}
+
+#buttons{
+  display: flex;
 }
 
 #output {
@@ -64,10 +69,15 @@ body {
   color: white;
   margin: 10px;
   padding: 10px;
+  width: 80%;
   border: none;
   border-radius: 5px;
   font-size: 20px;
+  resize: none;
+  height: auto;
+
 }
+
 
 #userInput::placeholder {
   color: rgba(255, 255, 255, 0.625);
@@ -95,6 +105,7 @@ body {
 }
 
 #virtualKeyboard {
+  width: 70%;
   cursor: pointer;
   font-size: 15px;
   margin: 10px;
