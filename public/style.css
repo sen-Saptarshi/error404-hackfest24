@@ -136,3 +136,20 @@ body {
   background-size: 100% 100%;
   background-image: url("./assets/spinner.svg");
 }
+
+#modelSelector {
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ffffff00;
+  border: 1px solid rgba(255, 255, 255, 0.323);
+  border-radius: 5px;
+}
+
+#modelSelector:focus {
+  outline: none;
+}
+
+#modelSelector option {
+  color: black;
+}
