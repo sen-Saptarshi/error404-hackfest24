@@ -15,7 +15,7 @@ body {
   width: 50%;
   margin: 10px;
   border: none;
-  padding:10px 15px;
+  padding: 10px 15px;
   background-color: #541ab1;
   filter: drop-shadow(5px 5px 1px #000000);
   color: white;
@@ -37,7 +37,7 @@ body {
   filter: drop-shadow(2px 2px 0px #000000);
 }
 
-#buttons{
+#buttons {
   display: flex;
 }
 
@@ -73,13 +73,12 @@ body {
   border: none;
   border-radius: 5px;
   font-size: 20px;
-  resize: none; 
+  resize: none;
   overflow-y: hidden;
   min-height: 35vh;
   height: auto;
   width: 55%;
 }
-
 
 #userInput::placeholder {
   color: rgba(255, 255, 255, 0.625);

@@ -21,8 +21,8 @@ function createKeyboard() {
       keyElement.addEventListener("click", () => {
         if (key === "←") {
           textArea.value = textArea.value.slice(0, -1);
-        // } else if (key === "Caps Lock") {
-        //   // Add Caps Lock functionality here
+          // } else if (key === "Caps Lock") {
+          //   // Add Caps Lock functionality here
         } else if (key === "↵") {
           textArea.value += "\n";
         } else {

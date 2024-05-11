@@ -26,20 +26,24 @@
         <h1>Trans-Lingo-GPT</h1>
       </div>
       <select name="modelSelector" id="modelSelector"></select>
-      <input type="text" id="userInput" placeholder="Enter text to translate" />
-      <textarea type="text" id="userInput" placeholder="Enter text to translate" ></textarea>
+
+      <textarea
+        type="text"
+        id="userInput"
+        placeholder="Enter text to translate"
+      ></textarea>
       <div id="buttons">
-      <button id="submitButton" onclick="translator()">Translate</button>
-      
-      <button id="virtualKeyboard" onclick="virtualKeyboard()">
-        Virtual Keyboard
-      </button>
+        <button id="submitButton" onclick="translator()">Translate</button>
+
+        <button id="virtualKeyboard" onclick="virtualKeyboard()">
+          Virtual Keyboard
+        </button>
       </div>
+      <div id="keyboard"></div>
       <div id="loading-animation">
         <span class="svg-spinners--6-dots-scale"></span>
       </div>
 
-      <div id="keyboard"></div>
       <div class="simple-keyboard"></div>
 
       <br />
