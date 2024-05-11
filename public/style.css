@@ -75,10 +75,12 @@ body {
   font-size: 20px;
   resize: none;
   overflow-y: hidden;
-  min-height: 35vh;
+  /* min-height: 35vh; */
   height: auto;
   width: 55%;
 }
+
+
 
 #userInput::placeholder {
   color: rgba(255, 255, 255, 0.625);
