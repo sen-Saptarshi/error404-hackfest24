@@ -43,7 +43,7 @@ body {
 
 #output {
   width: 60vh;
-  height: 5vh;
+  /* height: 5vh; */
   margin: 10px;
   padding: 10px;
   border: 0.1vh solid rgba(255, 255, 255, 0.323);
@@ -53,7 +53,7 @@ body {
 #readAloud {
   cursor: pointer;
   width: 3vh;
-  height: 5vh;
+  /* height: 5vh; */
   margin: 3vh;
   padding: 3vh;
   border: 0.3vh solid rgba(255, 255, 255, 0.323);
@@ -94,7 +94,7 @@ body {
   background-color: #ffffff00;
   border: 0.2vh solid rgba(255, 255, 255, 0.323);
   border-radius: 0.7vh;
-  height: 5vh;
+  height: vh;
   color: white;
 }
 
