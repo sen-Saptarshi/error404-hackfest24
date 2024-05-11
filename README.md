@@ -24,7 +24,7 @@ We propose the development of a language translator web application equipped wit
    We will train a character-level language model based on the Transformer architecture to understand the grammatical intricacies of each language. The Transformer will have multiple encoder and decoder blocks. The decoder will use the output from the encoder along with the text generated till now and predict the next character in the required language. The self attention mechanism will help in translation longer texts and still give accurate results.
 
    > Libraries used:
-   >
+
    > - PyTorch
    > - PyTorch.nn
    > - Numpy
