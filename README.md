@@ -62,3 +62,13 @@ By implementing this solution, we aim to bridge the language gap and provide use
 This solution leverages Flask for its simplicity and flexibility in deploying machine learning models, ensuring a smooth user experience and efficient translation services.
 
 ![cat-dog](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMH_Ptw-tS0FH_Vup35-JX4-m8occQ66Bsuos21rMufw&s)
+
+# Workflow
+
+1. [Data Acquisition and Preprocessing](#data-acquisition-and-preprocessing)
+2. [Model Training](#model-training)
+3. [NodeJS Web Application Development](#nodejs-web-application-development)
+4. [Integration of Machine Learning Models](#integration-of-machine-learning-models)
+5. [Text-to-Speech (TTS) Integration](#text-to-speech-tts-integration)
+6. [Speech-to-Text (STT) Integration](#speech-to-text-stt-integration)
+7. [Testing and Deployment](#testing-and-deployment)
