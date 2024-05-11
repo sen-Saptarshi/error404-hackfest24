@@ -24,7 +24,7 @@ function typeWriter(textElement, text, speed) {
 }
 
 /* Model Selector */
-const models = ["English to Hinglish"];
+const models = ["English to Hinglish", "Hinglish to English"];
 let modelCode = 0;
 const modelSelector = document.getElementById("modelSelector");
 for (let i = 0; i < models.length; i++) {
