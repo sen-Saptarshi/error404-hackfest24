@@ -24,7 +24,11 @@ function typeWriter(textElement, text, speed) {
 }
 
 /* Model Selector */
-const models = ["English to Hinglish", "Hinglish to English"];
+const models = [
+  "English to Hinglish",
+  "Hinglish to English",
+  "English to Hinglish Question Tone",
+];
 let modelCode = 0;
 const modelSelector = document.getElementById("modelSelector");
 for (let i = 0; i < models.length; i++) {
@@ -105,4 +109,3 @@ const readAloud = (event) => {
     console.log("Voices not loaded yet, please try again later.");
   }
 };
-
