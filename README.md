@@ -1,5 +1,5 @@
 # Problem Statement
-In a globalized world, effective communication across languages is crucial. However, language barriers often hinder seamless interaction. To address this issue, we aim to develop a web application that provides real-time translation services from English to Sanskrit and English to French. Additionally, the application will incorporate text-to-speech and speech-to-text features to enhance accessibility and user experience.
+In a globalized world, effective communication across languages is crucial. However, language barriers often hinder seamless interaction. To address this issue, we aim to develop a web application that provides real-time translation services from English to Sanskrit and English to Hindi. Additionally, the application will incorporate text-to-speech and speech-to-text features to enhance accessibility and user experience.
 
 ![Alt Text](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS10FfW4ofgBwhTgm_Uvw7hiE1pJx-KF2ojXEykn_cDjg&s)
 
