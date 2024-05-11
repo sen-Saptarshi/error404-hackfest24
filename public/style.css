@@ -1,5 +1,6 @@
 body {
   background: linear-gradient(#407b9b, #9900ff);
+  /* background: url("./assets/bg1.mp4") no-repeat center center fixed; */
   background-attachment: fixed;
   font-family: sans-serif;
   color: white;
