@@ -24,6 +24,7 @@ const keys = [
     ['अः'],
   ["←", "↵"],
 ];
+
 const textArea = document.getElementById("userInput");
 const keyboardContainer = document.getElementById("keyboard");
 
