@@ -28,7 +28,8 @@ We propose the development of a language translator web application equipped wit
    >
    > - PyTorch
    > - PyTorch.nn
-   > - ONNX Runtime
+   > - Numpy
+   > - pandas
 
 3. **NodeJS Web Application Development:**
 
