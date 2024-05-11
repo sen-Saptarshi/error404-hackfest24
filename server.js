@@ -19,7 +19,9 @@ app.get("/", (req, res) => {
 
 app.post("/translate", (req, res) => {
   let userInput = req.body.user;
-  const python = spawn("python", ["./pythonexe/translate.py"]);
+  let code = req.body.code;
+  const modelCode = ["eng_hing"];
+  const python = spawn("python", [`./translate_${modelCode[code]}.py`]);
   python.stdin.write(userInput.toString());
   python.stdin.end();
 

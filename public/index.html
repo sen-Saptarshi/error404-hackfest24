@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trans-Lingo-GPT</title>
     <link rel="shortcut icon" href="./assets/icon.svg" type="image/x-icon" />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css"
-    />
+    /> -->
+    <link rel="stylesheet" href="keyboard.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -24,6 +25,7 @@
         <img src="./assets/icon.svg" alt="logo" height="60px" />
         <h1>Trans-Lingo-GPT</h1>
       </div>
+      <select name="modelSelector" id="modelSelector"></select>
       <input type="text" id="userInput" placeholder="Enter text to translate" />
       <button id="submitButton" onclick="translator()">Translate</button>
 
@@ -34,20 +36,22 @@
       <button id="virtualKeyboard" onclick="virtualKeyboard()">
         Virtual Keyboard
       </button>
-      <div class="simple-keyboard"></div>
+      <div id="keyboard"></div>
 
       <br />
       <div style="display: flex; justify-content: center">
         <div id="output">the output will look like this</div>
 
-        <select id="selector"></select>
+        <select id="voiceSelector"></select>
 
         <div id="readAloud" onclick="readAloud(event)">
-         <img src="./assets/readaloud.svg" alt="" srcset="">
+          <img src="./assets/readaloud.svg" alt="" srcset="" />
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
     <script src="/script.js"></script>
+    <script src="/virtualKeyboard.js"></script>
   </body>
 </html>

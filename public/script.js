@@ -9,15 +9,46 @@ function hideLoading() {
   loadingElement.style.display = "none";
 }
 
+/* Typing Effect */
+function typeWriter(textElement, text, speed) {
+  let i = 0;
+  const typewriter = () => {
+    if (i < text.length) {
+      textElement.textContent += text.charAt(i);
+      i++;
+      setTimeout(typewriter, speed);
+    }
+  };
+
+  typewriter();
+}
+
+/* Model Selector */
+const models = ["English to Hinglish"];
+let modelCode = 0;
+const modelSelector = document.getElementById("modelSelector");
+for (let i = 0; i < models.length; i++) {
+  const optionforModel = document.createElement("option");
+  optionforModel.textContent = `${models[i]}`;
+  optionforModel.value = i;
+  modelSelector.appendChild(optionforModel);
+}
+modelSelector.addEventListener("change", (event) => {
+  // Get the selected option's value (index in the models array)
+  modelCode = parseInt(event.target.value);
+  console.log("Selected model:", models[modelCode]); // Optional for debugging
+});
+
 /* Translate API call Functionality */
 async function translator() {
   showLoading();
   const userInputField = document.getElementById("userInput");
   const outputDiv = document.getElementById("output");
+  outputDiv.textContent = "";
   const userInput = userInputField.value;
   const response = await fetch("/translate", {
     method: "POST", // Adjust to POST if your backend expects it
-    body: JSON.stringify({ user: userInput }),
+    body: JSON.stringify({ user: userInput, code: modelCode }),
     headers: { "Content-Type": "application/json" },
   });
 
@@ -26,8 +57,11 @@ async function translator() {
     return;
   }
   const translatedText = await response.text();
-  outputDiv.textContent = translatedText;
   hideLoading();
+  const textElement = document.querySelector("#output");
+  const text = translatedText;
+  const speed = 50; // Adjust speed here (lower for faster typing)
+  typeWriter(textElement, text, speed);
 }
 const inputField = document.getElementById("userInput");
 inputField.addEventListener("keypress", function (event) {
@@ -40,7 +74,7 @@ inputField.addEventListener("keypress", function (event) {
 
 const synth = window.speechSynthesis;
 const inputTxt = document.getElementById("output");
-const voiceSelect = document.getElementById("selector");
+const voiceSelect = document.getElementById("voiceSelector");
 
 let voices;
 
@@ -74,27 +108,27 @@ const readAloud = (event) => {
 
 /* Virtual KeyBoard Functionality */
 
-const Keyboard = window.SimpleKeyboard.default;
+// const Keyboard = window.SimpleKeyboard.default;
 
-const myKeyboard = new Keyboard({
-  onChange: (input) => onChange(input),
-  onKeyPress: (button) => onKeyPress(button),
-});
+// const myKeyboard = new Keyboard({
+//   onChange: (input) => onChange(input),
+//   onKeyPress: (button) => onKeyPress(button),
+// });
 
-function onChange(input) {
-  document.getElementById("userInput").value = input;
-  // console.log("Input changed", input);
-}
+// function onChange(input) {
+//   document.getElementById("userInput").value = input;
+//   // console.log("Input changed", input);
+// }
 
-function onKeyPress(button) {
-  // console.log("Button pressed", button);
-}
-// visibility of virtual keyboard
-function virtualKeyboard() {
-  const keyboardElement = document.querySelector(".simple-keyboard");
-  if (keyboardElement.style.display === "none") {
-    keyboardElement.style.display = "block";
-  } else {
-    keyboardElement.style.display = "none";
-  }
-}
+// function onKeyPress(button) {
+//   // console.log("Button pressed", button);
+// }
+// // visibility of virtual keyboard
+// function virtualKeyboard() {
+//   const keyboardElement = document.querySelector(".simple-keyboard");
+//   if (keyboardElement.style.display === "none") {
+//     keyboardElement.style.display = "block";
+//   } else {
+//     keyboardElement.style.display = "none";
+//   }
+// }

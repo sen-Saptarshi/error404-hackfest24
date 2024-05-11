@@ -1,0 +1,21 @@
+#keyboard {
+  width: 400px;
+  display: none;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.key {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #eeeeee35;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
