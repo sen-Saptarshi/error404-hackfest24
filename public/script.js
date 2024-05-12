@@ -54,6 +54,7 @@ for (let i = 0; i < models.length; i++) {
 }
 modelNames.addEventListener("click", (event) => {
   modelCode = parseInt(event.target.id);
+  document.getElementById("output").textContent = `Selected Model: ${models[modelCode]}`;
 });
 
 /* Translator */
@@ -118,7 +119,6 @@ const readAloud = (event) => {
     utterThis.voice = voices[voiceSelect.value];
     synth.speak(utterThis);
   } else {
-    // Handle the case where voices are not loaded yet
     console.log("Voices not loaded yet, please try again later.");
   }
 };
@@ -139,4 +139,17 @@ for (let i = 0; i < sentences.length; i++) {
   suggestions.className = "suggestions";
   suggestions.innerText = sentences[i];
   suggestion.appendChild(suggestions);
+}
+
+
+//button active status
+
+const buttons = document.querySelectorAll('.models');
+
+// Function to handle button click
+function handleClick(event) {
+    buttons.forEach(button => {
+        button.classList.remove('active');
+    });
+    event.target.classList.add('active');
 }
