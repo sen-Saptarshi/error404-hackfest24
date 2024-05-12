@@ -19,6 +19,7 @@ body {
 #intro {
   width: 100%;
   display: flex;
+  transform: translateY(-100%);
   justify-content: center;
   scale: 3;
   z-index: 999;
@@ -61,7 +62,7 @@ body {
   }
 
   100% {
-    transform: translateY(0%);
+    transform: translateY(-100%);
     opacity: 0;
   }
 }
