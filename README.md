@@ -59,7 +59,6 @@ We propose the development of a language translator web application equipped wit
 By implementing this solution, we aim to bridge the language gap and provide users with a convenient and efficient tool for cross-language communication, enhancing global connectivity and collaboration.
 
 This solution leverages Flask for its simplicity and flexibility in deploying machine learning models, ensuring a smooth user experience and efficient translation services.
-
 ![cat-dog](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMH_Ptw-tS0FH_Vup35-JX4-m8occQ66Bsuos21rMufw&s)
 
 
