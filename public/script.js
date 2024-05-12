@@ -1,15 +1,25 @@
-/* Global Loading Animation */
-function showLoading() {
-  const loadingElement = document.getElementById("loading-animation"); // Replace with your element ID
-  loadingElement.style.display = "block";
-}
+document.addEventListener("DOMContentLoaded", function () {
+  var anchorLinks = document.querySelectorAll('a[href^="#"]');
+  anchorLinks.forEach(function (anchorLink) {
+    anchorLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      var targetId = this.getAttribute("href");
+      var targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+});
 
-function hideLoading() {
-  const loadingElement = document.getElementById("loading-animation"); // Replace with your element ID
-  loadingElement.style.display = "none";
-}
+const button = document.getElementById("nav-button");
+const nav = document.getElementById("mynav");
 
-/* Typing Effect */
+button.addEventListener("click", () => {
+  nav.classList.toggle("show");
+});
+
+/* Typing Animation */
 function typeWriter(textElement, text, speed) {
   let i = 0;
   const typewriter = () => {
@@ -23,29 +33,32 @@ function typeWriter(textElement, text, speed) {
   typewriter();
 }
 
-/* Model Selector */
+/* ModelSelector */
 const models = [
-  "English to Hinglish",
-  "Hinglish to English",
-  "English to Hinglish Question Tone",
+  "English to Hinglish (assistant)",
+  "Hinglish to English (assistant)",
+  "English to Hinglish (query)",
+  "Hinglish to English (query)",
+  "English to Hindi",
+  "English to Sanskrit",
 ];
 let modelCode = 0;
-const modelSelector = document.getElementById("modelSelector");
+const modelNames = document.getElementById("modelNames");
 for (let i = 0; i < models.length; i++) {
-  const optionforModel = document.createElement("option");
-  optionforModel.textContent = `${models[i]}`;
-  optionforModel.value = i;
-  modelSelector.appendChild(optionforModel);
+  const element = models[i];
+  const div = document.createElement("div");
+  div.className = "models";
+  div.id = i;
+  div.innerText = element;
+  modelNames.appendChild(div);
 }
-modelSelector.addEventListener("change", (event) => {
-  // Get the selected option's value (index in the models array)
-  modelCode = parseInt(event.target.value);
-  // console.log("Selected model:", models[modelCode]); // Optional for debugging
+modelNames.addEventListener("click", (event) => {
+  modelCode = parseInt(event.target.id);
 });
 
-/* Translate API call Functionality */
+/* Translator */
 async function translator() {
-  showLoading();
+  //   showLoading();
   const userInputField = document.getElementById("userInput");
   const outputDiv = document.getElementById("output");
   outputDiv.textContent = "";
@@ -61,7 +74,7 @@ async function translator() {
     return;
   }
   const translatedText = await response.text();
-  hideLoading();
+  //   hideLoading();
   const textElement = document.querySelector("#output");
   const text = translatedText;
   const speed = 50; // Adjust speed here (lower for faster typing)
@@ -74,7 +87,7 @@ inputField.addEventListener("keypress", function (event) {
   }
 });
 
-/* Text to Speech Functionality */
+/* TTS */
 
 const synth = window.speechSynthesis;
 const inputTxt = document.getElementById("output");
@@ -109,3 +122,21 @@ const readAloud = (event) => {
     console.log("Voices not loaded yet, please try again later.");
   }
 };
+
+/* Virtual Keyboard */
+
+// suggestions
+
+const sentences = [
+  "English to Hinglish - Schedule a meeting for today itself.",
+  "Hinglish to Engllish - aaj kitne alarms hai?",
+  "English to Hinglish interrogative - Can you do it?",
+  "Hinglish to English interrogative - What is the schedule today?",
+];
+const suggestion = document.getElementById("suggestion");
+for (let i = 0; i < sentences.length; i++) {
+  const suggestions = document.createElement("div");
+  suggestions.className = "suggestions";
+  suggestions.innerText = sentences[i];
+  suggestion.appendChild(suggestions);
+}

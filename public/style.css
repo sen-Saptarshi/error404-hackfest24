@@ -1,158 +1,404 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
 body {
-  background: linear-gradient(#407b9b, #9900ff);
-  /* background: url("./assets/bg1.mp4") no-repeat center center fixed; */
-  background-attachment: fixed;
-  font-family: sans-serif;
+  background: url("./assets/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: white;
+  margin: 0px;
+  font-family: sans-serif;
+  overflow-x: hidden;
 }
 
-#head {
+/*loading screen*/
+
+#intro {
+  width: 100%;
   display: flex;
   justify-content: center;
-  filter: drop-shadow(3px 3px 3px #877373);
+  scale: 3;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  animation: becomeSmall 4s ease-in-out forwards;
 }
 
-#submitButton {
-  width: 50%;
-  margin: 10px;
-  border: none;
-  padding: 10px 15px;
-  background-color: #541ab1;
-  filter: drop-shadow(5px 5px 1px #000000);
-  color: white;
-  font-size: 20px;
-  font-weight: 700;
-  border-radius: 5px;
-  transition: transform 0.1s ease-in-out, filter 0.1s ease-in-out;
+#blackScreen {
+  position: absolute;
+  z-index: 998;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  animation: blurry 4s ease-in-out forwards;
 }
 
-#submitButton:hover {
+@keyframes blurry {
+  0% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes becomeSmall {
+  0% {
+    transform: translateY(250%);
+  }
+  30% {
+    transform: translateY(250%);
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 0;
+  }
+}
+
+/*end of loading screen*/
+
+/*nav bar*/
+.nav-button {
+  background-color: transparent;
+  border: 10px;
+  color: black;
   cursor: pointer;
-  background-color: #9900ff;
-  transform: translateY(2px) translateX(2px);
-  filter: drop-shadow(3px 3px 0px #000000);
+  font-size: 30px;
+  margin-left: 32px;
+  float: left;
+  line-height: 70px;
+  display: none;
 }
 
-#submitButton:active {
-  transform: translateY(1px) translateX(1px);
-  filter: drop-shadow(2px 2px 0px #000000);
+.nav-button:focus {
+  outline: none;
 }
 
-#buttons {
+nav {
+  background-color: rgba(0, 0, 0, 0.537);
+  flex-wrap: wrap;
+}
+
+nav ul {
   display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 20px 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background-color: rgb(33, 78, 78);
+}
+
+@media (max-width: 800px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .nav-button {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .nav-button {
+    display: block;
+  }
+  nav {
+    background-color: rgb(62, 109, 149);
+  }
+}
+
+/* end of nav bar*/
+
+/* Models */
+#modelNames {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px -50px 0px 20px;
+}
+
+/* .models {
+  width: 200px;
+  display: block;
+  color: white;
+  background-color: teal;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.models:hover {
+  background-color: rgb(33, 78, 78);
+}
+
+.models:active {
+  background-color: rgb(111, 182, 182);
+} */
+
+#Models {
+  display: flex;
+  justify-content: center;
+  padding: 100px;
+}
+#displayer {
+  display: flex;
+  justify-content: center;
+}
+
+#io {
+  display: flex;
+  justify-content: center;
+}
+
+#output,
+#userInput {
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  width: 20vw;
+  margin: 5px;
+  padding: 15px;
+  background-color: thistle;
 }
 
 #output {
-  width: 60vh;
-  /* height: 5vh; */
-  margin: 10px;
-  padding: 10px;
-  border: 0.1vh solid rgba(255, 255, 255, 0.323);
-  border-radius: 0.7vh;
+  color: black;
 }
 
-#readAloud {
-  cursor: pointer;
-  width: 3vh;
-  /* height: 5vh; */
-  margin: 3vh;
-  padding: 3vh;
-  border: 0.3vh solid rgba(255, 255, 255, 0.323);
-  border-radius: 5px;
+/* media query */
+
+@media screen and (max-width: 1400px) {
+  body {
+    background-size: cover;
+  }
+  #modelNames {
+    margin: 0px;
+    position: relative;
+  }
+  #models {
+    margin: 0px;
+  }
+  #displayer {
+    display: block;
+  }
+  #Models {
+    padding: 30px;
+  }
 }
 
-#readAloud:hover {
-  background-color: #ffffff3a;
+@media screen and (max-width: 1024px) {
+  body {
+    background-size: cover;
+  }
+  #modelNames {
+    margin: 0px;
+  }
+  #models {
+    margin: 0px;
+  }
+  #displayer {
+    display: block;
+  }
+  #Models {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #displayer {
+    display: block;
+  }
+  #modelNames {
+    margin: 0px;
+  }
+  #models {
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #displayer {
+    display: block;
+  }
+  #modelNames {
+    margin: 0px;
+  }
+  #models {
+    margin: 0px;
+  }
+  .threeButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 #userInput {
-  background-color: #ffffff3a;
-  color: white;
-  margin: 10px;
-  padding: 10px;
-  width: 80%;
-  border: none;
-  border-radius: 5px;
-  font-size: 20px;
   resize: none;
-  overflow-y: hidden;
-  /* min-height: 35vh;
-  height: auto; */
-  width: 55%;
+  height: 9rem;
 }
 
-
-
-#userInput::placeholder {
-  color: rgba(255, 255, 255, 0.625);
-}
-
-#userInput:focus {
+#userInput:focus,
+#output:focus {
   outline: none;
+
+  /*   background-color: rgb(172, 160, 172);*/
 }
 
-#voiceSelector {
-  margin: 10px;
-  padding: 10px;
-  background-color: #ffffff00;
-  border: 0.2vh solid rgba(255, 255, 255, 0.323);
-  border-radius: 0.7vh;
-  height: vh;
-  color: white;
-}
-
-#voiceSelector:focus {
-  outline: none;
-}
-
-#voiceSelector option {
-  color: black;
-}
-
+#translateButton,
+#tts,
+.models,
 #virtualKeyboard {
-  width: 70%;
+  text-decoration: none;
+  text-align: center;
+  border: none;
   cursor: pointer;
-  font-size: 15px;
-  margin: 10px;
   padding: 10px;
-  background-color: #ffffff00;
-  border: 1px solid rgba(255, 255, 255, 0.323);
   border-radius: 5px;
-  color: white;
+  margin-top: 30px;
+  background-color: rgb(17, 114, 114);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+  filter: drop-shadow(0.1px 0.1px 12px rgba(50, 50, 50, 0.521));
+  transition: 0.3s ease-in-out all;
+  /* setting with to fit the maximum length of the text and same for every model; */
+  width: 17rem;
+  /* animation: floating 1s linear infinite; */
+}
+#translateButton {
+  width: 25px;
 }
 
+.threeButtons {
+  position: relative;
+  margin: 0 180px;
+  display: flex;
+  justify-content: center;
+}
+
+#translateButton:hover,
+#tts:hover,
+.models:hover,
 #virtualKeyboard:hover {
-  background-color: #ffffff3a;
+  background-color: rgb(33, 78, 78);
+  transform: translateY(3px);
+  filter: drop-shadow(0px 3px 1px rgb(0, 0, 0));
+  /* animation: none; */
 }
 
-#loading-animation {
-  display: none;
-  /* Initially hidden */
-  /* Add your animation styles here (e.g., for a spinner) */
+.models:active {
+  background-color: rgb(111, 182, 182);
 }
 
-.svg-spinners--6-dots-scale {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-image: url("./assets/spinner.svg");
+#arrow,
+#tts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#modelSelector {
+#arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  padding: 15px;
+}
+
+/* #translateButton {
+  
+} */
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+/* styling the voiceselector drop down */
+#voiceSelector {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  padding: 15px;
+  background-color: rgba(28, 105, 100, 0.341);
   color: white;
-  margin: 10px;
-  padding: 10px;
-  background-color: #ffffff00;
-  border: 1px solid rgba(255, 255, 255, 0.323);
-  border-radius: 5px;
-}
-
-#modelSelector:focus {
+  border-radius: 20px;
   outline: none;
 }
 
-#modelSelector option {
-  color: black;
+#tts,
+#translateButton {
+  margin: 25px;
+  width: fit-content;
+}
+
+/* animation of background image to slowly zoom in */
+/* @keyframes becomeSmall {
+  0% {
+    scale: 3;
+  }
+  100% {
+    scale: 1;
+  }
+} */
+/* end of Models */
+
+#suggestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.suggestions {
+  margin: 10px;
+  padding: 10px;
+  background-color: #37624e38;
+  border: 1px solid #ccc;
+  border-radius: 15px;
 }

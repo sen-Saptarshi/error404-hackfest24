@@ -4,57 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trans-Lingo-GPT</title>
-    <link rel="shortcut icon" href="./assets/icon.svg" type="image/x-icon" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/css/index.css"
-    /> -->
     <link rel="stylesheet" href="keyboard.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div
-      style="
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      "
-    >
-      <div id="head">
-        <img src="./assets/icon.svg" alt="logo" height="60px" />
-        <h1>Trans-Lingo-</h1>
-        <h1 style="color: rgb(142, 39, 39)">GPT</h1>
-      </div>
-      <select name="modelSelector" id="modelSelector"></select>
+    <div id="blackScreen"></div>
+    <div id="intro">
+      <img src="./assets/logo.png" alt="logo" height="40px" />
+    </div>
 
-      <input type="text" id="userInput" placeholder="Enter text to translate" />
-      <div id="buttons">
-        <button id="submitButton" onclick="translator()">Translate</button>
+    <nav>
+      <button class="nav-button" id="nav-button">
+        <img src="./assets/menu.svg" alt="" />
+      </button>
 
-        <button id="virtualKeyboard" onclick="virtualKeyboard()">
-          Virtual Keyboard
-        </button>
-      </div>
-      <div id="keyboard"></div>
-      <div id="loading-animation">
-        <span class="svg-spinners--6-dots-scale"></span>
-      </div>
+      <ul id="mynav">
+        <li
+          style="
+            padding: 0%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          "
+          id="logo"
+        >
+          <img src="./assets/logo.png" alt="logo" height="40px" />
+        </li>
+        <li><a href="#Models">Models</a></li>
+        <li><a href="#Blog">Blogs</a></li>
+        <li><a href="#AboutUs">About Us</a></li>
+      </ul>
+    </nav>
 
-      <br />
-      <div style="display: flex; justify-content: center">
-        <div id="output">the output will look like this</div>
+    <div id="Models">
+      <div id="displayer">
+        <div id="modelNames"></div>
+        <div id="screenSaver">
+          <div id="bigbox">
+            <div id="io">
+              <textarea
+                id="userInput"
+                placeholder="Type a sentence to translate"
+              ></textarea>
+              <div id="arrow"><img src="./assets/arrow.svg" alt="" /></div>
 
-        <select id="voiceSelector"></select>
-
-        <div id="readAloud" onclick="readAloud(event)">
-          <img src="./assets/readaloud.svg" alt="" srcset="" />
+              <div id="output"></div>
+            </div>
+            <div class="threeButtons">
+              <div id="translateButton" onclick="translator()">Translate</div>
+              <div id="tts" onclick="readAloud(event)">
+                <img src="./assets/tts.svg" alt="" />
+              </div>
+              <div id="vs">
+                <select id="voiceSelector"></select>
+              </div>
+              <div
+                id="virtualKeyboard"
+                onclick="virtualKeyboard()"
+                style="max-width: 30px; max-height: 30px"
+              >
+                <img src="./assets/keyboard.svg" alt="" width="20" />
+              </div>
+            </div>
+            <div id="keyboard"></div>
+          </div>
         </div>
       </div>
     </div>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/simple-keyboard@latest/build/index.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script> -->
-    <script src="/script.js"></script>
-    <script src="/virtualKeyboard.js"></script>
+
+    <div id="suggestion">for good output use this:</div>
+    <div id="Blog"></div>
+    <div id="AboutUs"></div>
+
+    <script src="script.js"></script>
+    <script src="virtualKeyboard.js"></script>
   </body>
 </html>
