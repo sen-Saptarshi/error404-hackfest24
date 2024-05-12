@@ -39,8 +39,8 @@ const models = [
   "Hinglish to English (assistant)",
   "English to Hinglish (query)",
   "Hinglish to English (query)",
-  "English to Hindi",
   "English to Sanskrit",
+  "English to Hindi",
 ];
 let modelCode = 0;
 const modelNames = document.getElementById("modelNames");
